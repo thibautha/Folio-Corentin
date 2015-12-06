@@ -1,0 +1,46 @@
+$font-Title : 'nevis';
+$font-corps : 'Noto serif';
+$font-cartridge : 'Playfair display';
+// $font-thin : 'Oswald';
+// $font-lite : 'Open Sans';
+$color-main : #4ffec9;
+$color-main-lite : #959595;
+$color-second : #616161;
+$color-background : #efefef;
+
+$mobile : 767px;
+$tablet : 1024px;
+
+$rightMobile : 5%;
+$rightTablet : 2%;
+$rightDesktop : 3%;
+
+$paddingMobile : 10%;
+$paddingTablet : 15%;
+$paddingDesktop : 20%;
+
+$duration : 0.4s;
+
+@mixin right-margin($property) {
+     @media (min-width: $mobile) and (max-width: $tablet) {
+         #{$property}: $rightTablet;
+     }
+     @media (max-width: $mobile) {
+         #{$property} : $rightMobile;
+     }
+     @media (min-width: $tablet) {
+         #{$property} : $rightDesktop;
+     }
+}
+
+@mixin lateral-padding {
+     @media (min-width: $mobile) and (max-width: $tablet) {
+         padding: 0 $paddingTablet;
+     }
+     @media (max-width: $mobile) {
+         padding : 0 $paddingMobile;
+     }
+     @media (min-width: $tablet) {
+         padding : 0 $paddingDesktop;
+     }
+}

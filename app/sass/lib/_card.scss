@@ -1,0 +1,246 @@
+
+html,body,.main, ul {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+body,.main {
+    overflow: hidden;
+}
+body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #FFF;
+    background-image:url('../img/default/XXX.jpg');
+}
+
+li {
+    list-style: none;
+}
+
+
+.hidden {
+    display: none!important;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    //  background-color: #F00;
+
+    .background {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        .block {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            background-color: $color-background;
+            // background-color: #F00;
+
+            &.top-left {
+                top: 0;
+                left: 0;
+            }
+            &.top-right {
+                top: 0;
+                right: 0;
+            }
+            &.bottom-left {
+                bottom: 0;
+                left: 0;
+            }
+            &.bottom-right {
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+
+    .content {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        // margin: auto;
+        text-align: center;
+        padding: 155px 0 0;
+
+        .hello {
+            font:400 30px/35px $font-Title;
+            // text-transform: uppercase;
+            color: $color-main-lite;
+            z-index: 2;
+        }
+
+        h1 {
+            position: absolute;
+            width: 100%;
+            font:400 60px/65px $font-Title;
+            text-transform: uppercase;
+            z-index: 2;
+        }
+
+        .cartridge {
+            position: relative;
+            // width: 50%;
+            width: 444px;
+            // height: 50%;
+            height: 245px;
+            margin: auto;
+            margin-bottom: 80px;
+
+            p {
+                position: absolute;
+                bottom: 40px;
+                width: 100%;
+                font: 400 20px/22px $font-cartridge;
+                color: $color-main-lite;
+                margin: 0;
+                // left: calc( 50% - 40px );
+
+            }
+
+            span {
+                background-color: $color-main;
+                position: absolute;
+
+                &.top {
+                    top: 0;
+                    right: 0;
+                    height: 3px;
+                    width: 0;
+                }
+                &.left {
+                    top: 0;
+                    left: 0;
+                    height: 0;
+                    width: 3px;
+                }
+                &.bottom {
+                    bottom: 0;
+                    left: 0;
+                    height: 3px;
+                    width: 0;
+                }
+                &.right {
+                    bottom: 0;
+                    right: 0;
+                    height: 0;
+                    width: 3px;
+                }
+                &.dash {
+                    background-color: $color-background;
+                    left: 50%;
+                    top: 90%;
+                    width: 3px;
+                    height: 0;
+                    background-color: #afafaf;
+                }
+            }
+        }
+        .ad {
+            font: 400 14px/16px $font-corps;
+            color: $color-main-lite;
+        }
+        .link {
+            margin-top: 50px;
+            font: 400 16px/18px $font-Title;
+            a {
+                text-decoration: none;
+                color: #000;
+                margin-bottom: 30px;
+                display: block;
+            }
+        }
+    }
+}
+
+
+/***************************************** ERRORS *****************************************/
+
+.error--browser {
+    #wrapper, #logo-wrapper, .nav-top-right, footer {
+        display: none;
+    }
+}
+
+#error_browser {
+	display: block;
+	max-width: 320px;
+	margin: auto;
+    padding-bottom: 20px;
+
+ 	.logo_home {
+            margin: 10% 45px 0;
+		}
+
+	h3 {
+		color: $color-second;
+		font-size: 18px;
+		line-height: 20px;
+		margin-bottom: 20px;
+        text-align: center;
+        font-weight: 400;
+        font:900 18px/20px $font-corps;
+	}
+
+	ul {
+		margin: auto;
+		text-align: center;
+		width: 100%;
+        padding: 0;
+		li {
+			display: inline-block;
+			text-align: center;
+			vertical-align: top;
+            width: 50%;
+            margin-top: 30px;
+
+			a {
+				color: $color-second;
+				font-size: 17px;
+				line-height: 18px;
+				text-decoration: none;
+			}
+		}
+	}
+
+    .link_navigateur {
+        margin-top: 20px;
+    }
+}
+
+#error_browser_wrapper {
+	display: none;
+    background-position: center center;
+	width: 100%;
+	height: 100%;
+    position: absolute;
+    z-index: 9999;
+    background-color: #FFF;
+}
+
+.error--browser {
+	 #error_browser_wrapper {
+	 	display: block;
+        overflow-y: scroll;
+	 }
+}
+
+.lt-ie8 {
+    #error_browser {
+
+    	ul {
+
+    		li {
+                display: inline;
+                zoom: 1;
+            }
+        }
+    }
+}

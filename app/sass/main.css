@@ -1,0 +1,195 @@
+@font-face {
+  font-family: "nevis";
+  src: url("../fonts/nevis-Bold/nevis-Bold.eot");
+  src: url("../fonts/nevis-Bold/nevis-Bold.otf") format("truetype"), url("../fonts/nevis-Bold/nevis-Bold.woff") format("woff"), url("../fonts/nevis-Bold/nevis-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/nevis-Bold/nevis-Bold.svg#QuadrantaBold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Noto serif";
+  src: url("../fonts/NotoSerif/NotoSerif.eot");
+  src: url("../fonts/NotoSerif/NotoSerif.otf") format("truetype"), url("../fonts/NotoSerif/NotoSerif.woff") format("woff"), url("../fonts/NotoSerif/NotoSerif.eot?#iefix") format("embedded-opentype"), url("../fonts/NotoSerif/NotoSerif.svg#QuadrantaBold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Playfair display";
+  src: url("../fonts/PlayfairDisplay-Italic/PlayfairDisplay-Italic.eot");
+  src: url("../fonts/PlayfairDisplay-Italic/PlayfairDisplay-Italic.otf") format("truetype"), url("../fonts/PlayfairDisplay-Italic/PlayfairDisplay-Italic.woff") format("woff"), url("../fonts/PlayfairDisplay-Italic/PlayfairDisplay-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/PlayfairDisplay-Italic/PlayfairDisplay-Italic.svg#QuadrantaBold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+html, body, .main, ul {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0; }
+
+body, .main {
+  overflow: hidden; }
+
+body {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #FFF;
+  background-image: url("../img/default/XXX.jpg"); }
+
+li {
+  list-style: none; }
+
+.hidden {
+  display: none !important; }
+
+.main {
+  width: 100%;
+  height: 100%; }
+  .main .background {
+    position: relative;
+    width: 100%;
+    height: 100%; }
+    .main .background .block {
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      background-color: #efefef; }
+      .main .background .block.top-left {
+        top: 0;
+        left: 0; }
+      .main .background .block.top-right {
+        top: 0;
+        right: 0; }
+      .main .background .block.bottom-left {
+        bottom: 0;
+        left: 0; }
+      .main .background .block.bottom-right {
+        bottom: 0;
+        right: 0; }
+  .main .content {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 155px 0 0; }
+    .main .content .hello {
+      font: 400 30px/35px "nevis";
+      color: #959595;
+      z-index: 2; }
+    .main .content h1 {
+      position: absolute;
+      width: 100%;
+      font: 400 60px/65px "nevis";
+      text-transform: uppercase;
+      z-index: 2; }
+    .main .content .cartridge {
+      position: relative;
+      width: 444px;
+      height: 245px;
+      margin: auto;
+      margin-bottom: 80px; }
+      .main .content .cartridge p {
+        position: absolute;
+        bottom: 40px;
+        width: 100%;
+        font: 400 20px/22px "Playfair display";
+        color: #959595;
+        margin: 0; }
+      .main .content .cartridge span {
+        background-color: #4ffec9;
+        position: absolute; }
+        .main .content .cartridge span.top {
+          top: 0;
+          right: 0;
+          height: 3px;
+          width: 0; }
+        .main .content .cartridge span.left {
+          top: 0;
+          left: 0;
+          height: 0;
+          width: 3px; }
+        .main .content .cartridge span.bottom {
+          bottom: 0;
+          left: 0;
+          height: 3px;
+          width: 0; }
+        .main .content .cartridge span.right {
+          bottom: 0;
+          right: 0;
+          height: 0;
+          width: 3px; }
+        .main .content .cartridge span.dash {
+          background-color: #efefef;
+          left: 50%;
+          top: 90%;
+          width: 3px;
+          height: 0;
+          background-color: #afafaf; }
+    .main .content .ad {
+      font: 400 14px/16px "Noto serif";
+      color: #959595; }
+    .main .content .link {
+      margin-top: 50px;
+      font: 400 16px/18px "nevis"; }
+      .main .content .link a {
+        text-decoration: none;
+        color: #000;
+        margin-bottom: 30px;
+        display: block; }
+
+/***************************************** ERRORS *****************************************/
+.error--browser #wrapper, .error--browser #logo-wrapper, .error--browser .nav-top-right, .error--browser footer {
+  display: none; }
+
+#error_browser {
+  display: block;
+  max-width: 320px;
+  margin: auto;
+  padding-bottom: 20px; }
+  #error_browser .logo_home {
+    margin: 10% 45px 0; }
+  #error_browser h3 {
+    color: #616161;
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 400;
+    font: 900 18px/20px "Noto serif"; }
+  #error_browser ul {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    padding: 0; }
+    #error_browser ul li {
+      display: inline-block;
+      text-align: center;
+      vertical-align: top;
+      width: 50%;
+      margin-top: 30px; }
+      #error_browser ul li a {
+        color: #616161;
+        font-size: 17px;
+        line-height: 18px;
+        text-decoration: none; }
+  #error_browser .link_navigateur {
+    margin-top: 20px; }
+
+#error_browser_wrapper {
+  display: none;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 9999;
+  background-color: #FFF; }
+
+.error--browser #error_browser_wrapper {
+  display: block;
+  overflow-y: scroll; }
+
+.lt-ie8 #error_browser ul li {
+  display: inline;
+  zoom: 1; }
+
+/*# sourceMappingURL=maps/main.css.map */
