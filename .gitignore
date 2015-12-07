@@ -3,6 +3,3 @@ node_modules
 .DS_Store
 maps/main.css.map
 app/sass/maps/
-img/garbage/
-EV/
-.htaccess

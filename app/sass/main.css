@@ -75,7 +75,8 @@ li {
     .main .content .hello {
       font: 400 30px/35px "nevis";
       color: #959595;
-      z-index: 2; }
+      z-index: 2;
+      margin-bottom: 30px; }
     .main .content h1 {
       position: absolute;
       width: 100%;
@@ -129,13 +130,18 @@ li {
       font: 400 14px/16px "Noto serif";
       color: #959595; }
     .main .content .link {
-      margin-top: 50px;
-      font: 400 16px/18px "nevis"; }
+      padding-top: 50px;
+      font: 400 16px/18px "nevis";
+      width: 100px;
+      margin: auto; }
       .main .content .link a {
         text-decoration: none;
         color: #000;
-        margin-bottom: 30px;
-        display: block; }
+        display: inline-block;
+        transition: color .4s;
+        padding-bottom: 30px; }
+        .main .content .link a:hover {
+          color: #4ffec9; }
 
 /***************************************** ERRORS *****************************************/
 .error--browser #wrapper, .error--browser #logo-wrapper, .error--browser .nav-top-right, .error--browser footer {

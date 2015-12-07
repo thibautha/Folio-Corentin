@@ -24,9 +24,9 @@ gulp.task('styles', function() {
         .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
         .pipe(sourcemaps.init())
             .pipe(sass().on('error', sass.logError))
-            // .pipe(autoprefixer({
-            //     browsers: ['last 5 versions']
-            // }))
+            .pipe(autoprefixer({
+                browsers: ['last 5 versions']
+            }))
         .pipe(sourcemaps.write('maps/'))
         .pipe(gulp.dest('app/sass/'))
         .pipe(notify({

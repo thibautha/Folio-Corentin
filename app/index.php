@@ -33,8 +33,8 @@
       <div class="content" style="visibility: hidden;">
 
           <div class="hello">
-          <span>Hello,</span>
-          <span>i'm</span>
+          <span class="begin">Hello,</span>
+          <span class="next">i'm</span>
           </div>
           <h1>Corentin Foucher</h1>
 
@@ -80,9 +80,9 @@
     <!-- End Google Analytics -->
 
 
-    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="scripts/jquery/dist/jquery.min.js"></script>
     <script src="scripts/modernizr-custom.js"></script>
-    <script src="../node_modules/gsap/src/minified/TweenMax.min.js"></script>
+    <script src="scripts/gsap/src/minified/TweenMax.min.js"></script>
     <script src="scripts/main.js"></script>
 
     <!--Old Browser-->
