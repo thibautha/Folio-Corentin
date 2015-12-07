@@ -8,7 +8,7 @@
       <meta charset="utf-8">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       <title><?php echo TXT_TITLE; ?></title>
-      <meta name="description" content="<?php echo 'META_TITLE'; ?>"><!--TODO  META_TXT_TITLE-->
+      <meta name="description" content="<?php echo META_TITLE; ?>">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta property="og:title" content="<?php echo META_TITLE; ?>" />
       <meta property="og:site_name" content="<?php echo META_NAME; ?>"/>
@@ -33,33 +33,31 @@
       <div class="content" style="visibility: hidden;">
 
           <div class="hello">
-          <span class="begin">Hello,</span>
-          <span class="next">i'm</span>
+          <span class="begin"><?php echo TXT_HELLO; ?></span>
+          <!-- <span class="next">i'm</span> -->
           </div>
-          <h1>Corentin Foucher</h1>
+          <!-- <h1></h1> -->
+          <h1><?php echo TXT_NAME; ?></h1>
 
           <div class="cartridge">
+              <span class="border"></span>
             <span class="top"></span>
             <span class="left"></span>
             <span class="bottom"></span>
             <span class="right"></span>
-            <p>
-                  UX / UI Designer</br>
-                  &</br>
-                  Interactive Designer
+            <p><?php echo TXT_SITUATION; ?>
+
             </p>
             <span class="dash"></span>
           </div>
 
           <div class="ad">
-            <p>
-              I’m looking for an intership from Jaunary to December 2016
-            </p>
+            <p><?php echo TXT_AD; ?></p>
           </div>
 
           <div class="link">
-            <a href="#">Me resume</a>
-            <a href="#">Book</a>
+            <a href="<?php echo URL_LINK1; ?>#"><?php echo TXT_LINK1; ?></a>
+            <a href="<?php echo URL_LINK2; ?>#"><?php echo TXT_LINK2; ?></a>
           </div>
 
         </div>
@@ -74,7 +72,7 @@
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        ga('create', 'UA-XXXXX-Y', 'auto');
+        ga('create', '<?php echo GOOGLE_ANALYTICS; ?>', 'auto');
         ga('send', 'pageview');
     </script>
     <!-- End Google Analytics -->

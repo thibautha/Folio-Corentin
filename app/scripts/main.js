@@ -13,7 +13,8 @@
         $helloNext = $('.next'),
         $title = $('h1'),
         $cartridge = $('.cartridge'),
-        $cartridgeContent = $('.cartridge p')
+        $cartridgeContent = $('.cartridge p'),
+        $cartridgeBorder = $('.border'),
         $ad = $('.ad'),
         $link = $('.link'),
         $top = $('.top'),
@@ -24,50 +25,58 @@
         easing = Power4.easeInOut,
         easingOut = Power2.easeOut,
         easingIn = Power4.easeIn,
-        $contentHidde =[$title, $cartridge, $ad, $link, $helloBegin, $helloNext];
+        $contentHidde =[$title, $cartridge, $ad, $link, $hello];
 // , force3D: true, ease: easing
         // /         TweenLite.to($(s), duration, {y: d, force3D: true, ease: easing, onComplete: function() {
 
   $( window ).load(function() {
     //   console.log('hello Corentin');
-      TweenLite.to($topLeft, 0.4 ,{ y: 20, x: 20, force3D: true});
-      TweenLite.to($topRight, 0.4 ,{ y: 20, x: -20, force3D: true});
-      TweenLite.to($bottomLeft, 0.4 ,{ y: -20, x: 20, force3D: true});
-      TweenLite.to($bottomRight, 0.4 ,{ y: -20, x: -20, force3D: true, onComplete: function() {
+      TweenLite.to($topLeft, 0.6 ,{ y: 20, x: 20, force3D: true,ease: easingOut});
+      TweenLite.to($topRight, 0.6 ,{ y: 20, x: -20, force3D: true,ease: easingOut});
+      TweenLite.to($bottomLeft, 0.6 ,{ y: -20, x: 20, force3D: true,ease: easingOut});
+      TweenLite.to($bottomRight, 0.6 ,{ y: -20, x: -20, force3D: true,ease: easingOut, onComplete: function() {
 
 
       }});
       TweenLite.set($content, { visibility : 'visible'});
       TweenLite.set($contentHidde, { opacity: 0});
-      TweenLite.to($helloBegin, 1.5, { opacity: 1, onComplete: function() {
-          TweenLite.to($helloNext, 2, { opacity: 1})
-          TweenLite.to($title, 2, { opacity: 1, onComplete: cartridgeEffect() })
+      TweenLite.set($cartridge, { opacity: 1});
+          TweenLite.set($cartridgeContent, { opacity: 0});
+      TweenLite.to(([$hello, $cartridgeContent, $title  ]), 0.2, { delay: 0.2, opacity: 1, onComplete: function() {
+          TweenLite.set($cartridgeBorder, { scale: 0.9});
+
+          $cartridgeBorder.css('border', 'solid 3px #4ffec9');
+
+          TweenLite.to($cartridgeBorder,0.2 ,{ scale: 1, ease: easingOut, force3D: true, onComplete: follow() });
+
+    //       TweenLite.to($helloNext, 2, { opacity: 1})
+    //       TweenLite.to($title, 2, { opacity: 1, onComplete: cartridgeEffect() })
       }})
   });
 
-  function cartridgeEffect() {
-      TweenLite.set($cartridge, { opacity: 1});
-      TweenLite.set($cartridgeContent, { opacity: 0});
-      TweenLite.to($top, 1, { width: '100%', force3D: true, ease: easingIn,delay: 0.8, onComplete: function() {
-          TweenLite.to($left, 0.3, { height: '100%', force3D: true, onComplete: function() {
-              TweenLite.to($bottom, 0.2, { width: '100%', force3D: true, onComplete: function() {
-                  TweenLite.to($right, 1, { height: '100%', force3D: true, ease: easingOut, onComplete: function() {
-
-                  }});
-                  TweenLite.to($cartridgeContent, 1.5,{ opacity: 1,delay: 0.4,ease: easing, onComplete: follow()});
-              }});
-          }});
-      }});
-  }
-
+  // function cartridgeEffect() {
+  //     TweenLite.set($cartridge, { opacity: 1});
+  //     TweenLite.set($cartridgeContent, { opacity: 0});
+  //     TweenLite.to($top, 1, { width: '100%', force3D: true, ease: easingIn,delay: 0.8, onComplete: function() {
+  //         TweenLite.to($left, 0.3, { height: '100%', force3D: true, onComplete: function() {
+  //             TweenLite.to($bottom, 0.2, { width: '100%', force3D: true, onComplete: function() {
+  //                 TweenLite.to($right, 1, { height: '100%', force3D: true, ease: easingOut, onComplete: function() {
+  //
+  //                 }});
+  //                 TweenLite.to($cartridgeContent, 1.5,{ opacity: 1,delay: 0.4,ease: easing, onComplete: follow()});
+  //             }});
+  //         }});
+  //     }});
+  // }
+  //
   function follow() {
       console.log('follow me');
     //   TweenLite.set($ad,{ y: -30})
     //   TweenLite.set($link,{ y: -30})
             TweenLite.set(([$ad,$link]),{ y: -30})
-      TweenLite.to($dash, 0.7,{ height: 70, force3D: true, ease: easing, delay : 1.5, onComplete: function() {
-          TweenLite.to($ad, 0.5, { y: 10, force3D: true, ease: easing, opacity: 1})
-          TweenLite.to($link, 0.7, { y: 10,  force3D: true,delay: 0.8, ease: easing,opacity: 1})
+      TweenLite.to($dash, 0.4,{ height: 70, force3D: true, ease: easingIn, delay : 0, onComplete: function() {
+          TweenLite.to($ad, 0.4, { y: 10, force3D: true, ease: easingOut, opacity: 1})
+          TweenLite.to($link, 0.5, { y: 10,  force3D: true,delay: 0, ease: easingOut,opacity: 1})
 
       }})
   }

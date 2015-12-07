@@ -35,6 +35,9 @@ body {
   background-color: #FFF;
   background-image: url("../img/default/XXX.jpg"); }
 
+div, h1 {
+  box-sizing: border-box; }
+
 li {
   list-style: none; }
 
@@ -67,11 +70,14 @@ li {
         right: 0; }
   .main .content {
     position: absolute;
-    top: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     width: 100%;
     height: 100%;
     text-align: center;
-    padding: 155px 0 0; }
+    height: 570px; }
     .main .content .hello {
       font: 400 30px/35px "nevis";
       color: #959595;
@@ -96,36 +102,18 @@ li {
         font: 400 20px/22px "Playfair display";
         color: #959595;
         margin: 0; }
-      .main .content .cartridge span {
-        background-color: #4ffec9;
-        position: absolute; }
-        .main .content .cartridge span.top {
-          top: 0;
-          right: 0;
-          height: 3px;
-          width: 0; }
-        .main .content .cartridge span.left {
-          top: 0;
-          left: 0;
-          height: 0;
-          width: 3px; }
-        .main .content .cartridge span.bottom {
-          bottom: 0;
-          left: 0;
-          height: 3px;
-          width: 0; }
-        .main .content .cartridge span.right {
-          bottom: 0;
-          right: 0;
-          height: 0;
-          width: 3px; }
-        .main .content .cartridge span.dash {
-          background-color: #efefef;
-          left: 50%;
-          top: 90%;
-          width: 3px;
-          height: 0;
-          background-color: #afafaf; }
+      .main .content .cartridge .border {
+        width: 100%;
+        height: 100%;
+        display: block; }
+      .main .content .cartridge .dash {
+        position: absolute;
+        background-color: #efefef;
+        left: 50%;
+        top: 90%;
+        width: 3px;
+        height: 0;
+        background-color: #afafaf; }
     .main .content .ad {
       font: 400 14px/16px "Noto serif";
       color: #959595; }
@@ -138,10 +126,26 @@ li {
         text-decoration: none;
         color: #000;
         display: inline-block;
+        -webkit-transition: color .4s;
         transition: color .4s;
         padding-bottom: 30px; }
         .main .content .link a:hover {
           color: #4ffec9; }
+
+@media (max-width: 767px) {
+  .main .content {
+    padding: 30px;
+    height: 100%; }
+    .main .content .hello {
+      font: 400 18px/20px "nevis"; }
+    .main .content h1 {
+      width: -webkit-calc( 100% - 60px);
+      width: calc( 100% - 60px);
+      font: 400 24px/26px "nevis"; }
+    .main .content .cartridge {
+      width: 80%;
+      height: 40%;
+      font: 400 16px/18px "Playfair display"; } }
 
 /***************************************** ERRORS *****************************************/
 .error--browser #wrapper, .error--browser #logo-wrapper, .error--browser .nav-top-right, .error--browser footer {
